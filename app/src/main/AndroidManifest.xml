@@ -23,6 +23,14 @@
             android:name="com.example.marmm.demolevel5.UpdateActivity"
             android:label="@string/title_activity_update"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
+        <provider
+            android:name="RemindersProvider"
+            android:authorities="com.example.provider.reminders"
+            android:multiprocess="true"
+            android:exported="true">
+        </provider>
     </application>
 
 </manifest>

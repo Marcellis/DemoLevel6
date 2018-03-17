@@ -1,5 +1,6 @@
 package com.example.marmm.demolevel5;
 
+import android.net.Uri;
 import android.provider.BaseColumns;
 
 /**
@@ -7,6 +8,11 @@ import android.provider.BaseColumns;
  */
 
 public final class RemindersContract {
+
+
+    public static final String AUTHORITY = "com.example.provider.reminders";
+    public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY  + "/" + RemindersContract.ReminderEntry.TABLE_NAME);
+
     // To prevent someone from accidentally instantiating the contract class,
     // make the constructor private.
     private RemindersContract() {}
